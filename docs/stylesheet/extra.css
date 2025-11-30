@@ -1,3 +1,9 @@
+::selection {
+    background: var(--md-accent-fg-color--transparent);
+    color: black;
+    text-shadow: none;
+}
+
 .center-table {
   text-align: center;
   
@@ -6,8 +12,7 @@
   text-align: initial;
 }
 
-::selection {
-    background: var(--md-accent-fg-color--transparent);
-    color: black;
-    text-shadow: none;
+.compact p {
+  margin: 0;
+  padding: 0;
 }

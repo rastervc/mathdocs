@@ -7,12 +7,14 @@ repo_name = "rastervc/mathdocs"
 page_url = "rastervc.github.io/mathdocs"
 
 extra_javascript = [
-    "javascripts/mathjax.js",
-    "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"
+    "javascripts/katex.js",
+    "https://unpkg.com/katex@0/dist/katex.min.js",
+    "https://unpkg.com/katex@0/dist/contrib/auto-render.min.js",
 ]
 
 extra_css = [
-    "stylesheet/extra.css"
+    "stylesheet/extra.css",
+    "https://unpkg.com/katex@0/dist/katex.min.css",
 ]
 
 [project.theme]
@@ -27,14 +29,12 @@ features = [
     "content.tabs.link",
     "content.tooltips",
     "navigation.indexes",
-    "navigation.instant",
     "navigation.instant.prefetch",
     "navigation.path",
-    "navigation.sections",
     "navigation.top",
     "navigation.tracking",
     "search.highlight",
-    "toc.integrate"
+    # "toc.integrate"
 ]
 
 [[project.theme.palette]] 
