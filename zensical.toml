@@ -6,6 +6,18 @@ repo_url = "https://github.com/rastervc/mathdocs"
 repo_name = "rastervc/mathdocs"
 page_url = "rastervc.github.io/mathdocs"
 
+nav = [
+    { "Home" = "index.md" },
+    { "Abstract Algebra" = [
+        { "Test" = "abstract-algebra/test.md" },
+        { "Rings and Modules" = [
+            { "Foundations" = "abstract-algebra/rings-and-modules/foundations.md" },
+            { "Homomorphisms" = "abstract-algebra/rings-and-modules/homomorphisms.md" },
+            { "Algebras" = "abstract-algebra/rings-and-modules/algebras.md" },
+        ]},
+    ]},
+]
+
 extra_javascript = [
     "javascripts/katex.js",
     "https://unpkg.com/katex@0/dist/katex.min.js",
@@ -46,8 +58,8 @@ toggle.name = "Switch to dark mode"
 
 [[project.theme.palette]]
 scheme = "slate"
-primary = "red"
-accent = "amber"
+primary = "pink"
+accent = "cyan"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to light mode"
 

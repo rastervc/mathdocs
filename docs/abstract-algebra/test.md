@@ -6,13 +6,23 @@
 
 ***Definition.*** Let $X$ be a magma and $e \in X$ one of its elements. Suppose that for every $x \in X$, at least one of the equalities $ex = x$ and $xe = x$ holds. Then we call $e$ an *ultraweak identity* in $X$.
 
+<div class="compact" markdown>
+
 ***Theorem.*** Suppose $X$ is a magma and $e$ is a left identity and $e'$ is a right identity. Then $e = e'$, and together they are a two-sided identity in $X$.
 
-*Proof.* Using $ex = x$ we find $ee' = e'$. Using $xe' = x$ we find $ee' = e$. We now easily get the desired equality $e = ee' = e'$. <span style="float:right;">$\square$</span>
+*Proof.* Using $ex = x$ we find $ee' = e'$. Using $xe' = x$ we find $ee' = e$. We now easily get the desired equality $e = ee' = e'$. 
+<span style="float:right;">$\square$</span>
+
+</div>
+
+<div class="compact" markdown>
 
 ***Theorem.*** Suppose $X$ is a magma, $e$ is an identity, and $e'$ is an ultraweak identity. Then $e = e'$.
 
-*Proof.* We know that at least one of $ee' = e$ and $e'e = e$ is true since $e'$ is an ultraweak identity. Using the fact that $e$ is an identity, we find $ee' = e'e = e'$ and therefore $e = e'$ as desired. <span style="float:right;">$\square$</span>
+*Proof.* We know that at least one of $ee' = e$ and $e'e = e$ is true since $e'$ is an ultraweak identity. Using the fact that $e$ is an identity, we find $ee' = e'e = e'$ and therefore $e = e'$ as desired. 
+<span style="float:right;">$\square$</span>
+
+</div>
 
 This is a very important result. If a magma contains a two-sided identity, then there are no other identities. Not even one-sided or ultraweak.
 
@@ -42,13 +52,27 @@ Let $S$ be a semigroup and $x \in S$ an element. We call $y \in S$ a *weak inver
 ***Definition.***
 Let $S$ be a semigroup and $x \in S$ an element. We call $y \in S$ a *weak left inverse* of $x$ if and only if $yx^2 = x$. In this case, we say $x$ is *left regular*. We define *weak right inverses* and *weak right invertability* in a similar fashion.
 
+<div class="compact" markdown>
+
 ***Theorem.*** Let $S$ be a semigroup and $x, y, z \in S$ such that $y$ is a weak left inverse of $x$ and $z$ is a weak right inverse of $x$. Then $x$ is regular, and $y$ and $z$ are both weak inverses of $x$. 
 
-*Proof.* From $yx^2 = x$ we find $yx^2z = xz$ by multiplying with $z$ on the right side. Then we find $xz = y(x^2z) = yx$ using the fact that $z$ is a weak right inverse. Consequently, we get $xyx = xxz = x$, that is, $x$ is regular and $y$ is a weak inverse. Similarly, we find $xzx = yxx = x$, which means that $z$ is a weak inverse too. <span style="float:right;">$\square$</span>
+*Proof.* From $yx^2 = x$ we find $yx^2z = xz$ by multiplying with $z$ on the right side. Then we find $xz = y(x^2z) = yx$ using the fact that $z$ is a weak right inverse. Consequently, we get $xyx = xxz = x$, that is, $x$ is regular and $y$ is a weak inverse. Similarly, we find $xzx = yxx = x$, which means that $z$ is a weak inverse too. 
+<span style="float:right;">$\square$</span>
+
+</div>
 
 For this reason, left/right regularity is sometimes called *strong regularity*.
 
+<div class="compact" markdown>
+
 ***Theorem.*** Let $S$ be a semigroup and $x, y \in S$ such that $y$ is the weak inverse of $x$. Then $xy$ and $yx$ are idempotent elements of $S$.
+
+*Proof.*
+<span style="float: right">$\square$</span>
+
+</div>
+
+<div class="compact" markdown>
 
 ***Theorem.*** Let $M$ be a monoid and $x$ one of its elements.
 
@@ -57,6 +81,9 @@ For this reason, left/right regularity is sometimes called *strong regularity*.
 3. If $x$ is regular and cancellable, then it is invertible.
 
 *Proof.* In the first case, suppose $y$ is the weak left inverse of $x$. Then $yx^2 = x$, whence $yx = e$ by right cancellability. The second result may be proven similarly. For the third proposition, suppose $y$ is a weak inverse of $x$. Then $xyx = x$. Cancelling on the left side gives us $yx = e$, whereas cancelling on the right side outputs $xy = e$. Together, the two relations show that $y$ is the inverse of $x$,
+<span style="float: right">$\square$</span>
+
+</div>
 
 ## Cancellable Elements
 
