@@ -7,7 +7,15 @@
 1. $(R, +)$ is an abelian group. The additive identity is usually denoted by $0$.
 2. $(R^*, \cdot)$ is a semigroup, where $R^* = R \setminus \{0\}$.
 3. For every $a, b, c, \in R$, the following equalities hold.
-   <div>$$ a(b + c) = ab + ac \quad\text{and}\quad (a + b)c = ac + bc $$</div>
+   <div>
+      <div class="wide-screen">
+      $$ a(b + c) = ab + ac \quad\quad (a + b)c = ac + bc $$
+      </div>
+      <div class="thin-screen">
+      $$a(b + c) = ab + ac$$ 
+      $$(a + b)c = ac + bc $$
+      </div>
+   </div>
       These are called the laws of distributivity.
 
 If $(R^*, \cdot)$ is a monoid, then $R$ is called a *unital ring* or *ring with unity* and the multiplicative identity is denoted by $1$. If multiplication is commutative, then $R$ is called a *commutative ring*.
@@ -69,7 +77,15 @@ We can obtain a trivial ring from any abelian group by letting it be the additiv
 ***Definition 6.*** (Modules) An abelian group $(M, +)$ together with a ring $R$ and a binary operation $\cdot: R \times M \to M$ is called a *left $R$-module* if and only if it satisfies the following additional properties.
 
 1. For every $r, s \in R$ and $x, y \in M$, the following equalities hold. 
-   <div> $$ r(x + y) = rx + ry \quad\text{and}\quad (r + s)x = rx + sx  $$ </div>
+   <div>
+      <div class="wide-screen">
+      $$ r(x + y) = rx + ry \quad\quad (r + s)x = rx + sx  $$ 
+      </div>
+      <div class="thin-screen">
+      $$ r(x + y) = rx + ry$$
+      $$ (r + s)x = rx + sx$$
+      </div>
+   </div>
       These are called the laws of distributivity.
 
 2. For every $r, s \in R$ and $x \in M$ the equality $r(sx) = (rs)x$ holds.

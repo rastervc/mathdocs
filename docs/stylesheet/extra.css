@@ -1,9 +1,3 @@
-::selection {
-    background: var(--md-accent-fg-color--transparent);
-    color: black;
-    text-shadow: none;
-}
-
 .center-table {
   text-align: center;
   
@@ -15,4 +9,22 @@
 .compact p {
   margin: 0;
   padding: 0;
+}
+
+.thin-screen {
+  display: none;
+}
+
+.wide-screen {
+  display: block;
+}
+
+@media (max-width: 450px) {
+  .thin-screen {
+    display: block;
+  }
+
+  .wide-screen {
+    display: none;
+  }
 }
