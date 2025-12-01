@@ -1,3 +1,7 @@
+* {
+  hyphens: auto;
+}
+
 .center-table {
   text-align: center;
   

@@ -8,8 +8,8 @@
 
 ***Definition.*** (Rings) A nonempty set $R$, along with two binary operations $+, \cdot: R \times R \to R$ is called a *ring* iff it satisfies the following properties.
 
-1. $(R, +)$ is an abelian group. The additive identity is usually denoted by $0$.
-2. $(R^*, \cdot)$ is a semigroup, where $R^* = R \setminus \{0\}$.
+1. $(R, +)$ is an abelian group. The additive identity is usually denoted by $0$ or $0_R$.
+2. $(R^*, \cdot)$ is a monoid, where $R^* = R \setminus \{0\}$. The multiplicative identity is usually denoted by $1$ or $1_R$.
 3. For every $a, b, c, \in R$, the following equalities hold.
    <div>
       <div class="wide-screen">
@@ -22,7 +22,7 @@
    </div>
       These are called the laws of distributivity.
 
-If $(R^*, \cdot)$ is a monoid, then $R$ is called a *unital ring* or *ring with unity* and the multiplicative identity is denoted by $1$. If multiplication is commutative, then $R$ is called a *commutative ring*.
+If multiplication is commutative, then $R$ is called a *commutative ring*.
 
 ***Note.*** Many mathematicians prefer to call unital rings just rings, and instead call a non-unital ring an *rng*. The missing *i* represents the absence of a multiplicative identity. Some authors (mainly working in commutaive algebra, number theory etc.) only really use commutative unital rings, and so this is what they call a ring. 
 
@@ -54,26 +54,26 @@ This might seem a bit arbitrary at first, especially since so far we have only e
 ### Boring rings
 
 ***Definition.*** (Zero ring)
-The zero ring is the commutative unital ring whose only element is $0$, the additive identity. The ring itself is denoted by $0$ as well, unsurprisingly.
+The zero ring is the ring whose only element is $0$. Unsurprisingly, it is usually denoted by $\{0\}$ or simply $0$.
 
 <div class="compact" markdown>
 
-***Theorem.*** Let $R$ be a unital ring. Then $R = 0$ if and only if $0 = 1$.
+***Theorem.*** Let $R$ be a ring. Then $R = 0$ if and only if $0 = 1$.
 
 *Proof.* The forward direction is obvious. For the converse, note that $x = 1 \cdot x = 0 \cdot x = 0$, whence $0$ is the only element in the ring.
 <span style="float: right">$\square$</span>
 
 </div>
 
-***Definition.*** (Trivial rings) A ring $R$ is *trivial* if and only if $xy = 0$ for all $x, y \in R$.
+***Definition.*** (Trivial rngs) An rng $R$ is *trivial* if and only if $xy = 0$ for all $x, y \in R$.
 
-***Note.*** Crazy people like to call trivial rings *rngs of square zero*.
+***Note.*** Crazy people like to call trivial rngs *rngs of square zero*.
 
-We can obtain a trivial ring from any abelian group by letting it be the additive group, and defining multiplication as above.
+***Example.*** We can obtain a trivial rng from any abelian group by letting it be the additive group, and defining multiplication as above.
 
 <div class="compact" markdown>
 
-***Theorem.*** The only unital trivial ring is the zero ring.
+***Theorem.*** The only trivial ring is the zero ring.
 
 *Proof.* It is clear the zero ring is trivial. For the forward direction, note that $1 \cdot 1$ is equal to both $1$ and $0$, since the ring is trivial, whence $1 = 0$. This is the hallmark property of the zero ring.
 <span style="float: right">$\square$</span>
@@ -101,7 +101,7 @@ Like most algebraic structures, rings are compatible with downwards and upwards 
 
 <div class="compact" markdown>
 
-***Theorem.*** Let $R$ be a ring and $\{S_\alpha\}_{\alpha \in A}$ a family of subrings. Then their intersection is also a subring of $R$. If all the $S_\alpha$ are unital rings, so is their intersection.
+***Theorem.*** Let $R$ be a ring and $\{S_\alpha\}_{\alpha \in A}$ a family of subrings. Then their intersection is also a subring of $R$.
 
 *Proof.*
 <span style="float: right">$\square$</span>
@@ -110,7 +110,7 @@ Like most algebraic structures, rings are compatible with downwards and upwards 
 
 <div class="compact" markdown>
 
-***Theorem.*** Let $R$ be a ring and $\{S_\alpha\}_{\alpha \in A}$ a directed family of subrings. Then their union is also a subring of $R$. If at least one of the $S_\alpha$ is a unital subring, so is the union.
+***Theorem.*** Let $R$ be a ring and $\{S_\alpha\}_{\alpha \in A}$ a directed family of subrings. Then their union is also a subring of $R$.
 
 *Proof.* Let $S$ be their union and fix two elements $x, y \in S$. We know $x$ is contained in some $S_\alpha$ and $y$ is contained in some $S_\beta$. Since the family is directed, there is some $\gamma$ such that both of these subrings are subsets of $S_\gamma$, whence $x, y \in S_\gamma$. Since $S_\gamma$ is a ring, it contains $x - y$ and $xy$ and hence so does $S$, proving it is a subring of $R$.
 <span style="float: right">$\square$</span>
@@ -173,12 +173,10 @@ and hence to the much simpler condition $xy = yx$.
 
 2. For every $r, s \in R$ and $x \in M$ the law of associativity $(rs)x = r(sx)$ holds.
    
-3. If $R$ is unital, then $1 \cdot x = x$ for every $x \in M$.
+3. For every $x \in M$, $1_R \cdot x = x$.
 
 Some people write $_RM$ to emphasize the fact that $M$ is a left $R$-module.
-The operation $\cdot$ is called scalar multiplication, and $R$ is the ring of scalars. If $R$ is unital, then $M$ is a *unital left $R$-module*. 
-
-As one would expect, we also define *right $R$-modules*. The obvious way. They are similarly emphasized as $M_R$. 
+The operation $\cdot$ is called scalar multiplication, and $R$ is the ring of scalars. As one would expect, we also define *right $R$-modules*. The obvious way. They are similarly emphasized as $M_R$. 
 
 ***Note.*** Most of our results will only be stated and proven for left modules. It is up to the reader to realize they work just as fine for right modules as well.
 
@@ -195,30 +193,27 @@ As one would expect, we also define *right $R$-modules*. The obvious way. They a
 
 ***Definition.*** (Bimodules) Suppose $R$ and $S$ are two rings and $(M, +)$ is an abelian group. Then $M$ is an *$(R,S)$-bimodule* if and only if it is a left $R$-module, a right $S$-module, and it satisfies the associativity law $ (rx)s = r(xs) $ for every $r \in R$, $x \in M$ and $s \in S$. The $(R, S)$-bimodule structure is commonly emphasized as $_RM_S$.
 
-One could easily define multimodules, having a family of "left rings" and one of "right rings", but that would be insane and unnecessary (at least for our purposes).
-
-***Note.*** Like before, if a result applies to every module type (including bimodules), it will not be restated for each one. Try to ask yourself: Does this work for right modules? What about bimodules?
+***Exercise.*** Define multimodules.
 
 ### Boring modules
 
-***Definition.*** (Zero module) The zero module is the module whose only element is $0$, the additive identity. The module itself is denoted by $0$ as well, unsurprisingly. It is needless to speak of the ring of scalars, or of left/right/bi modules in this context.
+***Definition.*** (Zero module) The zero module is the module whose only element is $0$. It is denoted by $\{0\}$ or just $0$. The ring(s) over which it is defined is(are) irrelevant; the structure of the zero module is too simple for it to matter.
 
-There are a few other trivial (yet surprisingly important) examples of modules.
+There are a few other trivial examples of modules.
 
-***Example.*** Any ring $R$ can be given the structure a left $R$-module, a right $R$-module, and an $(R,R)$-bimodule by letting its multiplication operation be scalar multiplication in the module.
+***Example.*** Any ring $R$ can be given the structure a left $R$-module, a right $R$-module, and an $(R,R)$-bimodule by defining scalar multiplication in the most natural way imaginable: $r \cdot x = rx$.
 
-***Example.*** Let $R$ be a ring and $S$ a subring. Then $R$ can likewise be given the structure of a left $S$-module, $(S, S)$-bimodule, $(S, R)$-bimodule and so on.
+***Example.*** Suppose $M$ is a left $R$-module and $S$ is a subring of $R$. Then $M$ is also a left $S$-module. In particular, $R$ is an $(S, S)$-bimodule, as well as an $(R,S)$- or $(S,R)$-bimodule.
 
-***Example.*** Let $(G, +)$ be an abelian group. Then $G$ is a $\mathbb{Z}$-module. If $M$ is a left $R$-module, then it can trivially be given the structure of a $(R, \mathbb{Z})$-bimodule.
+***Example.*** Let $(G, +)$ be an abelian group. Then $G$ is a $\mathbb{Z}$-module. If $M$ is a left $R$-module, then it can similarly be given the structure of a $(R, \mathbb{Z})$-bimodule. Think of $\mathbb{Z}$ as the default ring that can be used to fill these "empty slots".
 
-***Example.*** Let $M$ be a left $R$-module. Then $M$ can be naturally given a left $\mathcal{D}(R)$-module structure by defining $(n + r)x = nx + rx$.
 ### Submodules
 
 ***Definition.*** (Submodules) Let $M$ be a left $R$-module and $N \subset M$ a nonempty subset. Then $N$ is a *submodule*, or more precisely a *left $R$-submodule* if it forms a left $R$-module with respect to the addition and scalar multiplicaiton defined in $M$. We define submodules similarly for right modules and bimodules. 
 
 <div class="compact" markdown>
 
-***Theorem.*** Let $M$ be a left $R$-module and $N \subset M$ a nonempty subset. Then $N$ is a submodule of $M$ if and only if $x - ry \in N$ for every $x, y \in N$ and $r \in R \cup \mathbb{Z}$.
+***Theorem.*** Let $M$ be a left $R$-module and $N \subset M$ a nonempty subset. Then $N$ is a submodule of $M$ if and only if $x - ry \in N$ for every $x, y \in N$ and $r \in R$.
 
 *Proof.* If $N$ is a submodule, the condition clearly holds. For the converse, note that letting $r = 1$ gives us $x - y \in N$, showing that $N$ is a subgroup of $M$. Letting $x = 0$ and $r = -s$ shows $sy \in N$ whenever $s \in R$ and $y \in N$, whence $N$ is closed under scalar multiplication. Properties like distributivity and associativity hold since we are still working inside $M$.
 <span style="float: right;">$\square$</span>
