@@ -30,7 +30,7 @@ extra_css = [
 ]
 
 [project.theme]
-font.text = "Merriweather"
+font.text = "Noto Serif"
 font.code = "JetBrains Mono"
 
 features = [
