@@ -1,4 +1,4 @@
-# Introduction to Algebraic Structures
+# TODO
 
 ## Identities
 
@@ -61,13 +61,11 @@ Let $S$ be a semigroup and $x \in S$ an element. We call $y \in S$ a *weak left 
 
 </div>
 
-For this reason, left/right regularity is sometimes called *strong regularity*.
-
 <div class="compact" markdown>
 
 ***Theorem.*** Let $S$ be a semigroup and $x, y \in S$ such that $y$ is the weak inverse of $x$. Then $xy$ and $yx$ are idempotent elements of $S$.
 
-*Proof.*
+*Proof.* $(xy)^2 = xyxy = (xyx)y = xy$ and $(yx)^2 = yxyx = (yxy)x = yx$.
 <span style="float: right">$\square$</span>
 
 </div>
@@ -89,6 +87,50 @@ For this reason, left/right regularity is sometimes called *strong regularity*.
 
 ## Idempotent Elements
 
+<div class="compact" markdown>
+
+***Theorem.*** Let $X$ be a finite magma and $a$ an element of $X$. Then there is a power of $a$ that is idempotent, i.e., there exists some $n > 0$ such that $a^{2n} = a^n$.
+
+*Proof.* Consider the powers of $a$. Since $X$ is finite, they must repeat at some point. In other words, there exist $s > t > 0$ such that $a^s = a^t$. Moreover, we get $a^{s^k} = a^{t^k}$ for any $k > 0$. Choose $k$ such that $s^k \ge 2t^k$ and define $u = a^k$, $v = b^k$. We will prove that $a^{u - v}$ is idempotent. Indeed, 
+<div>$$a^{2(u - v)} = a^{u - 2v} \cdot a^u = a^{u - 2v} \cdot a^v = a^{u - v}$$</div>
+as desired.
+<span style="float: right;">$\square$</span>
+
+</div>
+
 ## Nilpotent Elements
 
 ## Roots of Unity
+
+## Other
+
+<div class="compact" markdown>
+
+***Theorem.*** Let $R$ be a ring such that $U(R)$ is finite. Then
+<div>$$\on{Aut}(R, +) \ge \frac{|U(R)|^2}{|U(R) \cap Z(R)|}$$</div>
+
+*Proof.* For each $r \in R$, define the left and right actions $f_r(x) = rx$ and $g_r(x) = xr$ for $x \in R$. It is easy to check that $f_r$ and $g_r$ are automorphisms of $(R, +)$ precisely when $r \in U(R)$. Moreover, $f_r = g_s$ if and only if $r = s$ and $r \in U(R) \cap Z(R)$. Thus, our desired result follows by the $HK$-lemma.
+<span style="float: right;">$\square$</span>
+
+</div>
+
+<div class="compact" markdown>
+
+***Theorem.*** Let $G$ be a finite group such that $Z(G) > \frac{1}{4}|G|$. Then $G$ is commutative.
+
+*Proof.* Since $|\on{Inn}(G)| = |G : Z(G)| < 4$, it is cyclic, whence $G$ is commutative.
+<span style="float: right;">$\square$</span>
+
+***Corollary.*** If a finite group $G$ is non-commutative, then $|Z(G)| \le \frac{1}{4}|G|$.
+
+</div>
+
+***Theorem.*** The Klein four group $V_4$ is a non-cyclic group whose proper subgroups are all cyclic
+
+<div class="compact" markdown>
+
+***Theorem.*** Let $G$ be a group and $N \le Z(G)$ a subgroup of its center such that $G/N$ is cyclic. Then $G$ is commutative. In particular, $G$ is commutative whenever $\on{Inn}(G)$ is cyclic.
+
+</div>
+
+</div>

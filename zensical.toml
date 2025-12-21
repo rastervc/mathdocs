@@ -10,6 +10,15 @@ nav = [
     { "Home" = "index.md" },
     { "Abstract Algebra" = [
         { "Test" = "abstract-algebra/test.md" },
+        { "Group Theory" = [
+            { "Group Actions" = [
+                { "Introduction" = "abstract-algebra/group-theory/group-actions/introduction.md" },
+                { "Orbits and Stabiliziers" = "abstract-algebra/group-theory/group-actions/orbits-and-stabilizers.md" },
+                { "Internal Group Actions" = "abstract-algebra/group-theory/group-actions/internal-group-actions.md"  },
+                { "Fixed Points" = "abstract-algebra/group-theory/group-actions/fixed-points.md" },
+                { "Polya Counting" = "abstract-algebra/group-theory/group-actions/polya-counting.md" },
+            ]},
+        ]},
         { "Rings and Modules" = [
             { "Foundations" = "abstract-algebra/rings-and-modules/foundations.md" },
             { "Homomorphisms" = "abstract-algebra/rings-and-modules/homomorphisms.md" },
@@ -30,7 +39,7 @@ extra_css = [
 ]
 
 [project.theme]
-font.text = "Source Serif 4"
+font.text = "Merriweather"
 font.code = "JetBrains Mono"
 
 features = [
@@ -58,8 +67,8 @@ toggle.name = "Switch to dark mode"
 
 [[project.theme.palette]]
 scheme = "slate"
-primary = "pink"
-accent = "cyan"
+primary = "red"
+accent = "amber"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to light mode"
 
