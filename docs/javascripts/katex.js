@@ -9,7 +9,14 @@ document$.subscribe(({ body }) => {
     macros: {
       "\\vec": "\\smash{\\overset{\\rightarrow}{#1}}",
       "\\lvec": "\\smash{\\overset{\\xrightarrow{\\phantom{\\text{aaaa}}}\\!}{#1}}",
-      "\\on": "\\operatorname"
+      "\\on": "\\operatorname",
+      "\\acts": "\\curvearrowright",
+      "\\Hom": "\\on{Hom}",
+      "\\End": "\\on{End}",
+      "\\Aut": "\\on{Aut}",
+      "\\Inn": "\\on{Inn}",
+      "\\Out": "\\on{Out}",
+      "\\Cl": "\\on{Cl}",
     },
   })
 })

@@ -114,23 +114,6 @@ as desired.
 
 </div>
 
-<div class="compact" markdown>
 
-***Theorem.*** Let $G$ be a finite group such that $Z(G) > \frac{1}{4}|G|$. Then $G$ is commutative.
-
-*Proof.* Since $|\on{Inn}(G)| = |G : Z(G)| < 4$, it is cyclic, whence $G$ is commutative.
-<span style="float: right;">$\square$</span>
-
-***Corollary.*** If a finite group $G$ is non-commutative, then $|Z(G)| \le \frac{1}{4}|G|$.
-
-</div>
 
 ***Theorem.*** The Klein four group $V_4$ is a non-cyclic group whose proper subgroups are all cyclic
-
-<div class="compact" markdown>
-
-***Theorem.*** Let $G$ be a group and $N \le Z(G)$ a subgroup of its center such that $G/N$ is cyclic. Then $G$ is commutative. In particular, $G$ is commutative whenever $\on{Inn}(G)$ is cyclic.
-
-</div>
-
-</div>

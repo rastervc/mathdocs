@@ -50,6 +50,15 @@ In other words, $G_\lambda$ is the set of group elements which *fix* or *stabili
 
 </div>
 
+<div class="compact" markdown>
+
+***Theorem.*** The kernel of the action $G \acts \Lambda$ is the intersection of all stabilizers.
+
+*Proof.* 
+<span style="float: right;">$\square$</span>
+
+</div>
+
 ## The Orbit-Stabilizer theorem
 
 <div class="compact" markdown>

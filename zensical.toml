@@ -39,7 +39,7 @@ extra_css = [
 ]
 
 [project.theme]
-font.text = "Merriweather"
+font.text = "Merriweather Sans"
 font.code = "JetBrains Mono"
 
 features = [
@@ -67,7 +67,7 @@ toggle.name = "Switch to dark mode"
 
 [[project.theme.palette]]
 scheme = "slate"
-primary = "red"
+primary = "deep purple"
 accent = "amber"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to light mode"

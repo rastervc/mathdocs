@@ -39,6 +39,10 @@
 }
 
 [data-md-color-scheme=slate] strong {
+  color: rgba(255, 255, 255, 0.93);
+}
+
+[data-md-color-scheme=slate] em {
   color: rgba(255, 255, 255, 0.85);
 }
 
