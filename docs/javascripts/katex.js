@@ -7,10 +7,18 @@ document$.subscribe(({ body }) => {
       { left: "\\[", right: "\\]", display: true }
     ],
     macros: {
+      "\\N": "\\mathbb{N}",
+      "\\Z": "\\mathbb{Z}",
+      "\\Q": "\\mathbb{Q}",
+      "\\R": "\\mathbb{R}",
+      "\\C": "\\mathbb{C}",
+      "\\P": "\\mathcal{P}",
+      "\\Pf": "\\P_{\\text{fin}}",
       "\\vec": "\\smash{\\overset{\\rightarrow}{#1}}",
       "\\lvec": "\\smash{\\overset{\\xrightarrow{\\phantom{\\text{aaaa}}}\\!}{#1}}",
       "\\on": "\\operatorname",
       "\\acts": "\\curvearrowright",
+      "\\Sym": "\\on{Sym}",
       "\\Hom": "\\on{Hom}",
       "\\End": "\\on{End}",
       "\\Aut": "\\on{Aut}",

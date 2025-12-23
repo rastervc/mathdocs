@@ -14,7 +14,12 @@ nav = [
             { "Group Actions" = [
                 { "Introduction" = "abstract-algebra/group-theory/group-actions/introduction.md" },
                 { "Orbits and Stabiliziers" = "abstract-algebra/group-theory/group-actions/orbits-and-stabilizers.md" },
-                { "Internal Group Actions" = "abstract-algebra/group-theory/group-actions/internal-group-actions.md"  },
+                { "Internal Group Actions" = [
+                    { "By Translation, on Itself" = "abstract-algebra/group-theory/group-actions/internal-group-actions/translation-on-itself.md" },
+                    { "By Translation, on Subsets" = "abstract-algebra/group-theory/group-actions/internal-group-actions/translation-on-subsets.md" },
+                    { "By Conjugation, on Itself" = "abstract-algebra/group-theory/group-actions/internal-group-actions/conjugation-on-itself.md" },
+                    { "By Conjugation, on Subsets" = "abstract-algebra/group-theory/group-actions/internal-group-actions/conjugation-on-subsets.md" },
+                ]},
                 { "Fixed Points" = "abstract-algebra/group-theory/group-actions/fixed-points.md" },
                 { "Polya Counting" = "abstract-algebra/group-theory/group-actions/polya-counting.md" },
             ]},

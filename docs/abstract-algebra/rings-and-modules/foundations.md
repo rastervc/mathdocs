@@ -119,7 +119,7 @@ In other words, $\langle X \rangle$ is the smallest subring of $R$ containing $X
 
 ### The Dorroh extension
 
-***Definition.*** Let $R$ be an rng. We define its *Dorroh extension* to be the set $\mathcal{D}(R) = \mathbb{Z} \times R$, endowed with the following addition and multiplication operations.
+***Definition.*** Let $R$ be an rng. We define its *Dorroh extension* to be the set $\mathcal{D}(R) = \Z \times R$, endowed with the following addition and multiplication operations.
 <div>$$ (n, x) + (m, y) = (n + m, x + y)$$ </div>
 <div>$$ (n, x) \cdot (m, y) = (nm, mx + ny + xy) $$</div>
 It is natural to write $(n, x) = n + x$. Thus, the two definitions become 
@@ -131,7 +131,7 @@ which coincides with our intuitive understanding of these operations.
 
 ***Theorem.*** Let $R$ be an rng. Then its Dorroh extension $\mathcal{D}(R)$ is a ring. Moreover, $\mathcal{D}(R)$ is commutative if and only if $R$ is. 
 
-*Proof.* Clearly, $(\mathcal{D}(R), +)$ is an abelian group since it is the direct sum of $(\mathbb{Z}, +)$ and $(R, +)$. Associativity of multiplication and distributivity can be easily checked by hand. Since $1 + 0_R$ is a multiplicative identity, we find that $\mathcal{D}(R)$ is a ring.
+*Proof.* Clearly, $(\mathcal{D}(R), +)$ is an abelian group since it is the direct sum of $(\Z, +)$ and $(R, +)$. Associativity of multiplication and distributivity can be easily checked by hand. Since $1 + 0_R$ is a multiplicative identity, we find that $\mathcal{D}(R)$ is a ring.
 
 It remains to prove that $\mathcal{D}(R)$ is commutative if and only if $R$ is. By definition, the equality
 <div>$$(n + x) \cdot (m + y) = (m + y) \cdot (n + x)$$</div>
@@ -203,7 +203,7 @@ There are a few other trivial examples of modules.
 
 ***Example.*** Suppose $M$ is a left $R$-module and $S$ is a subring of $R$. Then $M$ is also a left $S$-module. In particular, $R$ is an $(S, S)$-bimodule, as well as an $(R,S)$- or $(S,R)$-bimodule.
 
-***Example.*** Let $(G, +)$ be an abelian group. Then $G$ is a $\mathbb{Z}$-module. If $M$ is a left $R$-module, then it can similarly be given the structure of a $(R, \mathbb{Z})$-bimodule. Think of $\mathbb{Z}$ as the default ring that can be used to fill these empty slots.
+***Example.*** Let $(G, +)$ be an abelian group. Then $G$ is a $\Z$-module. If $M$ is a left $R$-module, then it can similarly be given the structure of a $(R, \Z)$-bimodule. Think of $\Z$ as the default ring that can be used to fill these empty slots.
 
 ***Example.*** Suppose $R$ is a ring. Then $M_{mn}(R)$ is an $(M_m(R), M_n(R))$-bimodule.
 

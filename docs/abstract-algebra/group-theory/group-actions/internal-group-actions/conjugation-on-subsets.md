@@ -1,0 +1,1 @@
+# The action of a group on its subsets by conjugation
