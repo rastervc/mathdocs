@@ -7,17 +7,27 @@ document$.subscribe(({ body }) => {
       { left: "\\[", right: "\\]", display: true }
     ],
     macros: {
+      "\\on": "\\operatorname",
+      "\\bf": "\\textbf",
+      "\\vec": "\\smash{\\overset{\\rightarrow}{#1}}",
+      "\\lvec": "\\smash{\\overset{\\xrightarrow{\\phantom{\\text{aaaa}}}\\!}{#1}}",
+      "\\im": "\\on{im}",
+
       "\\N": "\\mathbb{N}",
       "\\Z": "\\mathbb{Z}",
       "\\Q": "\\mathbb{Q}",
       "\\R": "\\mathbb{R}",
       "\\C": "\\mathbb{C}",
+
+      "\\GL": "\\on{GL}",
+      "\\SL": "\\on{SL}",
+      "\\diag": "\\on{diag}",
+
       "\\P": "\\mathcal{P}",
       "\\Pf": "\\P_{\\text{fin}}",
-      "\\vec": "\\smash{\\overset{\\rightarrow}{#1}}",
-      "\\lvec": "\\smash{\\overset{\\xrightarrow{\\phantom{\\text{aaaa}}}\\!}{#1}}",
-      "\\on": "\\operatorname",
+
       "\\acts": "\\curvearrowright",
+      "\\char": "\\on{char}",
       "\\Sym": "\\on{Sym}",
       "\\Hom": "\\on{Hom}",
       "\\End": "\\on{End}",
@@ -25,6 +35,11 @@ document$.subscribe(({ body }) => {
       "\\Inn": "\\on{Inn}",
       "\\Out": "\\on{Out}",
       "\\Cl": "\\on{Cl}",
+      "\\Core": "\\on{Core}",
+      "\\Tor": "\\on{Tor}",
+      "\\Orb": "\\on{Orb}",
+      "\\Stab": "\\on{Stab}",
+
     },
   })
 })

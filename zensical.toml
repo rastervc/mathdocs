@@ -9,25 +9,20 @@ page_url = "rastervc.github.io/mathdocs"
 nav = [
     { "Home" = "index.md" },
     { "Abstract Algebra" = [
-        { "Test" = "abstract-algebra/test.md" },
         { "Group Theory" = [
-            { "Group Actions" = [
-                { "Introduction" = "abstract-algebra/group-theory/group-actions/introduction.md" },
-                { "Orbits and Stabiliziers" = "abstract-algebra/group-theory/group-actions/orbits-and-stabilizers.md" },
-                { "Internal Group Actions" = [
-                    { "By Translation, on Itself" = "abstract-algebra/group-theory/group-actions/internal-group-actions/translation-on-itself.md" },
-                    { "By Translation, on Subsets" = "abstract-algebra/group-theory/group-actions/internal-group-actions/translation-on-subsets.md" },
-                    { "By Conjugation, on Itself" = "abstract-algebra/group-theory/group-actions/internal-group-actions/conjugation-on-itself.md" },
-                    { "By Conjugation, on Subsets" = "abstract-algebra/group-theory/group-actions/internal-group-actions/conjugation-on-subsets.md" },
+            { "Inside a Group" = [
+                { "Subgroups" = "abstract-algebra/group-theory/inside-a-group/subgroups.md" },
+                { "Cosets and Lagrange" = "" },
+                { "Cyclic Groups" = "" },
+                { "Look Weak When Strong" = [
+                    { "Introduction" = "abstract-algebra/group-theory/inside-a-group/look-weak-when-strong/introduction.md" },
+                    { "Weak Identities" = "abstract-algebra/group-theory/inside-a-group/look-weak-when-strong/weak-identities.md" },
+                    { "Weak Inverses" = "abstract-algebra/group-theory/inside-a-group/look-weak-when-strong/weak-inverses.md" },
                 ]},
-                { "Fixed Points" = "abstract-algebra/group-theory/group-actions/fixed-points.md" },
-                { "Polya Counting" = "abstract-algebra/group-theory/group-actions/polya-counting.md" },
             ]},
-        ]},
-        { "Rings and Modules" = [
-            { "Foundations" = "abstract-algebra/rings-and-modules/foundations.md" },
-            { "Homomorphisms" = "abstract-algebra/rings-and-modules/homomorphisms.md" },
-            { "Algebras" = "abstract-algebra/rings-and-modules/algebras.md" },
+            { "Finite Groups" = [
+                { "The Sylow Theorems" = "abstract-algebra/group-theory/finite-groups/sylow-theorems.md" },
+            ]},
         ]},
     ]},
 ]
@@ -72,8 +67,8 @@ toggle.name = "Switch to dark mode"
 
 [[project.theme.palette]]
 scheme = "slate"
-primary = "deep purple"
-accent = "amber"
+primary = "pink"
+accent = "light blue"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to light mode"
 
