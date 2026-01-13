@@ -1,4 +1,4 @@
-# Groups and Prime Powers
+# Groups and Primes
 
 ## Introduction
 
@@ -31,6 +31,7 @@ It easily follows that $G/N$ is a $p$-group.
 <span style="float: right">$\square$</span>
 </div>
 
+### The $p$-group action lemma
 <div class="compact" markdown>
 ***Lemma.*** Suppose $G$ is a $p$-group acting on a non-empty finite set $\Lambda$. Then,
 <div>$$ |\Lambda^G| \equiv |\Lambda| \pmod p $$</div>
@@ -76,7 +77,6 @@ It remains to prove that any two Sylow $p$-subgroups are conjugate. If $S_1, S_2
 
 ### The third Sylow theorem
 
-
 <div class="compact" markdown>
 ***Theorem.*** Let $G$ be a finite group of order $|G| = p^nm$, where $p \nmid m$, and $n_p = |\Syl_p(G)|$. Then
 <ol>
@@ -94,7 +94,7 @@ and hence it suffices to prove that $|X| = 1$.
 </div>
 
 
-### Sylow for infinite groups
+## Sylow for infinite groups
 
 I'm sorry. This chapter is supposed to be about finite groups.
 

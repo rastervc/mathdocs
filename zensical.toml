@@ -22,7 +22,7 @@ nav = [
             ]},
             { "Finite Groups" = [
                 { "Introduction" = "abstract-algebra/group-theory/finite-groups/introduction.md" },
-                { "Groups and Prime Powers" = "abstract-algebra/group-theory/finite-groups/sylow-theorems.md" },
+                { "Groups and Primes" = "abstract-algebra/group-theory/finite-groups/groups-and-primes.md" },
                 { "More on p-Groups" = "abstract-algebra/group-theory/finite-groups/more-on-p-groups.md" },
                 { "Local Subgroups" = "abstract-algebra/group-theory/finite-groups/local-subgroups.md" },
                 { "The Normal Complement of a Sylow Subgroup" = "abstract-algebra/group-theory/finite-groups/normal-p-complement.md" },
