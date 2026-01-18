@@ -20,13 +20,23 @@ nav = [
                     { "Weak Inverses" = "abstract-algebra/group-theory/inside-a-group/look-weak-when-strong/weak-inverses.md" },
                 ]},
             ]},
+            { "Group Actions" = []},
+            { "Extensions of Groups" = [
+                {"Direct Products" = "abstract-algebra/group-theory/extensions/direct-products.md" },
+            ]},
+            { "Presentations" = []},
             { "Finite Groups" = [
                 { "Introduction" = "abstract-algebra/group-theory/finite-groups/introduction.md" },
                 { "Groups and Primes" = "abstract-algebra/group-theory/finite-groups/groups-and-primes.md" },
+                { "Sylow Subgroups" = "abstract-algebra/group-theory/finite-groups/sylow-subgroups.md" },
                 { "More on p-Groups" = "abstract-algebra/group-theory/finite-groups/more-on-p-groups.md" },
                 { "Local Subgroups" = "abstract-algebra/group-theory/finite-groups/local-subgroups.md" },
                 { "The Normal Complement of a Sylow Subgroup" = "abstract-algebra/group-theory/finite-groups/normal-p-complement.md" },
+                { "Hall Subgroups" = "abstract-algebra/group-theory/finite-groups/hall-subgroups.md" },
             ]},
+            { "Representation Theory" = []},
+            { "Geometric Group Theory" = []},
+            { "Group Cohomology" = []},
         ]},
     ]},
 ]

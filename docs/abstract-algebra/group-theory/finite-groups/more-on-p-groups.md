@@ -8,3 +8,11 @@
 by the $p$-group action lemma. Thus, $Z(G)$ cannot be empty.
 <span style="float: right;">$\square$</span>
 </div>
+
+## Nilpotent groups and $p$-groups
+
+***Theorem.*** All $p$-groups are nilpotent.
+
+***Theorem.*** A finite group is nilpotent iff it is the direct product of its Sylow subgroups.
+
+frattini argument and subgroup
