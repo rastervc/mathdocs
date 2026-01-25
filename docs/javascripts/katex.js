@@ -40,6 +40,7 @@ document$.subscribe(({ body }) => {
       "\\Orb": "\\on{Orb}",
       "\\Stab": "\\on{Stab}",
       "\\Syl": "\\on{Syl}",
+      "\\ab": "\\on{ab}",
 
     },
   })

@@ -10,30 +10,24 @@ nav = [
     { "Home" = "index.md" },
     { "Abstract Algebra" = [
         { "Group Theory" = [
-            { "Inside a Group" = [
-                { "Subgroups" = "abstract-algebra/group-theory/inside-a-group/subgroups.md" },
-                { "Cosets and Lagrange" = "" },
-                { "Cyclic Groups" = "" },
-                { "Look Weak When Strong" = [
-                    { "Introduction" = "abstract-algebra/group-theory/inside-a-group/look-weak-when-strong/introduction.md" },
-                    { "Weak Identities" = "abstract-algebra/group-theory/inside-a-group/look-weak-when-strong/weak-identities.md" },
-                    { "Weak Inverses" = "abstract-algebra/group-theory/inside-a-group/look-weak-when-strong/weak-inverses.md" },
-                ]},
-            ]},
+            { "Inside a Group" = []},
             { "Group Actions" = []},
             { "Extensions of Groups" = [
-                {"Direct Products" = "abstract-algebra/group-theory/extensions/direct-products.md" },
+                { "The Extension Toolkit" = [
+                    { "Introduction" = "abstract-algebra/group-theory/extensions/toolkit/introduction.md" },
+                    { "The Direct Product" = "abstract-algebra/group-theory/extensions/toolkit/direct-product.md" },
+                    { "The Semidirect Product" = "abstract-algebra/group-theory/extensions/toolkit/semidirect-product.md" },
+                    { "The Wreath Product" = "abstract-algebra/group-theory/extensions/toolkit/wreath-product.md" },
+                    { "The Zappa-Szép Product" = "abstract-algebra/group-theory/extensions/toolkit/zappa-szep-product.md" },
+                ]},
+                { "Abelian Groups" = []},
+                { "Building from Abelian Groups" = [
+                    { "Introduction" = "abstract-algebra/group-theory/extensions/building-from-abelian/introduction.md" },
+                    { "Solvable Groups" = "abstract-algebra/group-theory/extensions/building-from-abelian/solvable-groups.md" },
+                    { "Nilpotent Groups" = "abstract-algebra/group-theory/extensions/building-from-abelian/nilpotent-groups.md" },
+                ]},
             ]},
-            { "Presentations" = []},
-            { "Finite Groups" = [
-                { "Introduction" = "abstract-algebra/group-theory/finite-groups/introduction.md" },
-                { "Groups and Primes" = "abstract-algebra/group-theory/finite-groups/groups-and-primes.md" },
-                { "Sylow Subgroups" = "abstract-algebra/group-theory/finite-groups/sylow-subgroups.md" },
-                { "More on p-Groups" = "abstract-algebra/group-theory/finite-groups/more-on-p-groups.md" },
-                { "Local Subgroups" = "abstract-algebra/group-theory/finite-groups/local-subgroups.md" },
-                { "The Normal Complement of a Sylow Subgroup" = "abstract-algebra/group-theory/finite-groups/normal-p-complement.md" },
-                { "Hall Subgroups" = "abstract-algebra/group-theory/finite-groups/hall-subgroups.md" },
-            ]},
+            { "Groups and Primes" = []},
             { "Representation Theory" = []},
             { "Geometric Group Theory" = []},
             { "Group Cohomology" = []},
@@ -53,7 +47,7 @@ extra_css = [
 ]
 
 [project.theme]
-font.text = "Merriweather Sans"
+font.text = "Merriweather"
 font.code = "JetBrains Mono"
 
 features = [
@@ -76,15 +70,6 @@ features = [
 scheme = "default"
 primary = "red"
 accent = "deep purple"
-toggle.icon = "lucide/sun"
-toggle.name = "Switch to dark mode"
-
-[[project.theme.palette]]
-scheme = "slate"
-primary = "pink"
-accent = "light blue"
-toggle.icon = "lucide/moon"
-toggle.name = "Switch to light mode"
 
 [project.markdown_extensions.abbr]
 

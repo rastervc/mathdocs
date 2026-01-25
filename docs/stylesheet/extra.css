@@ -38,10 +38,6 @@
   }
 }
 
-[data-md-color-scheme=slate] strong em {
-  color: rgba(255, 255, 255, 0.90);
-}
-
 .katex-display {
   overflow-x: auto;
   overflow-y: hidden;

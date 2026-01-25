@@ -1,1 +1,0 @@
-# The Normal $p$-Complement
