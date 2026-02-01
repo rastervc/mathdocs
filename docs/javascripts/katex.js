@@ -11,7 +11,7 @@ document$.subscribe(({ body }) => {
       "\\bf": "\\textbf",
       "\\vec": "\\smash{\\overset{\\rightarrow}{#1}}",
       "\\lvec": "\\smash{\\overset{\\xrightarrow{\\phantom{\\text{aaaa}}}\\!}{#1}}",
-      "\\im": "\\on{im}",
+      "\\im": "\\on{Im}",
 
       "\\N": "\\mathbb{N}",
       "\\Z": "\\mathbb{Z}",
@@ -41,6 +41,8 @@ document$.subscribe(({ body }) => {
       "\\Stab": "\\on{Stab}",
       "\\Syl": "\\on{Syl}",
       "\\ab": "\\on{ab}",
+
+      "\\diff": "\\mathop{}\\!\\mathrm{d}",
 
     },
   })

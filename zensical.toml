@@ -8,7 +8,9 @@ page_url = "rastervc.github.io/mathdocs"
 
 nav = [
     { "Home" = "index.md" },
+    { "Logic" = []},
     { "Abstract Algebra" = [
+        "abstract-algebra/home.md",
         { "Group Theory" = [
             { "Inside a Group" = []},
             { "Group Actions" = []},
@@ -21,18 +23,36 @@ nav = [
                     { "The Zappa-Szép Product" = "abstract-algebra/group-theory/extensions/toolkit/zappa-szep-product.md" },
                 ]},
                 { "Abelian Groups" = []},
-                { "Building from Abelian Groups" = [
-                    { "Introduction" = "abstract-algebra/group-theory/extensions/building-from-abelian/introduction.md" },
-                    { "Solvable Groups" = "abstract-algebra/group-theory/extensions/building-from-abelian/solvable-groups.md" },
-                    { "Nilpotent Groups" = "abstract-algebra/group-theory/extensions/building-from-abelian/nilpotent-groups.md" },
+                { "Building With Abelian Groups" = [
+                    { "Introduction" = "abstract-algebra/group-theory/extensions/building-with-abelian/introduction.md" },
+                    { "Solvable Groups" = "abstract-algebra/group-theory/extensions/building-with-abelian/solvable-groups.md" },
+                    { "Nilpotent Groups" = "abstract-algebra/group-theory/extensions/building-with-abelian/nilpotent-groups.md" },
                 ]},
             ]},
-            { "Groups and Primes" = []},
+            { "Groups and Primes" = [
+                { "Various" = "abstract-algebra/group-theory/groups-and-primes/various.md" },
+            ]},
             { "Representation Theory" = []},
             { "Geometric Group Theory" = []},
             { "Group Cohomology" = []},
         ]},
     ]},
+    { "Analysis" = [
+        "analysis/home.md",
+        { "Real Analysis" = [
+            { "Single Variable Integration" = [
+                { "The Riemann Integral" = "analysis/real-analysis/single-variable-integration/riemann-integral.md" },
+                { "Primitives" = "analysis/real-analysis/single-variable-integration/primitives.md" },
+                { "The Riemann-Stieltjes Integral" = "analysis/real-analysis/single-variable-integration/riemann-stieltjes-integral.md" },
+            ]}
+        ]},
+        
+    ]},
+    { "Differential Geometry" = []},
+    { "Number Theory" = []},
+    { "Combinatorics" = []},
+    { "Olympiad Maths" = []},
+    { "Competitive Programming" = []},
 ]
 
 extra_javascript = [
@@ -62,6 +82,7 @@ features = [
     "navigation.path",
     "navigation.top",
     "navigation.tracking",
+    "navigation.tabs",
     "search.highlight",
     # "toc.integrate"
 ]
@@ -99,3 +120,4 @@ pygments_lang_class = true
 [project.markdown_extensions.toc]
 permalink = true
 title = "Contents"
+toc_depth = 3

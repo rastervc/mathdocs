@@ -31,11 +31,11 @@ where $\pi: G \to G/A \cong B$ is the natural projection. In particular, $G$ is 
 <span style="float: right">$\square$</span>
 </div>
 
-Solvable groups appear everywhere around us. The following two theorems should show just how frequent they are, especially in the theory of finite groups.
+Solvable groups appear everywhere around us. The following two theorems show just how frequent they are, especially in the theory of finite groups.
 
 ***Theorem.*** (Feit-Thompson) Every finite group of odd order is solvable.
 
-The Feit-Thompson theorem is a jewel of group theory, and far above what we can prove with the tools presented on this site. The following result, Burnside's $p^aq^b$ theorem, is of similar nature but much easier to prove. We will look at it more deeply when studying the representation theory of groups. 
+The Feit-Thompson theorem is a jewel of group theory, and far above what we can prove with the tools presented on this site. The following result, Burnside's $p^aq^b$ theorem, is of similar nature, but much easier to prove. We will look at it more deeply when studying the representation theory of groups. 
 
 ***Theorem.*** (Burnside) Every finite group of order $p^aq^b$, where $p$ and $q$ are prime, is solvable.
 
@@ -99,7 +99,7 @@ Now, suppose $N$ is normal in $G$ such that $G/N$ is abelian. We similarly consi
 <div class="compact" markdown>
 ***Theorem.*** A group $G$ is solvable if and only if it has a normal series with abelian factors.
 
-*Proof.* Any such normal series is an abelian series, hence its existence implies the solvability of the group. Converesely, it $G$ is solvable, then its derived series is normal with abelian factors.
+*Proof.* Any such normal series is an abelian series, hence its existence implies the solvability of the group. Converesely, if $G$ is solvable, then its derived series is normal with abelian factors.
 <span style="float: right">$\square$</span>
 </div>
 
@@ -112,8 +112,10 @@ Now, suppose $N$ is normal in $G$ such that $G/N$ is abelian. We similarly consi
 <span style="float: right">$\square$</span>
 </div><div class="compact" markdown>
 
+***Corollary.*** If $G$ and $H$ are groups, then $(G \times H)_{\ab} = G_{\ab} \times H_{\ab}$.
+
 <div class="compact" markdown>
-***Theorem.*** Let $G = N \ltimes H$ be a semidirect product. Then, $[G, G] = \langle [N, N], [H, H], [N, H] \rangle$.
+***Theorem.*** Let $G = N \rtimes H$ be a semidirect product. Then, $[G, G] = \langle [N, N], [H, H], [N, H] \rangle$.
 
 *Proof.* TODO
 <span style="float: right">$\square$</span>
@@ -126,3 +128,5 @@ Equality case for $l(G) \le l(A) + l(B)$.
 Finish proofs with TODO.
 
 Write about commutators
+
+Zappa-Szep product of solvable groups is solvable
