@@ -2,9 +2,6 @@
   hyphens: auto;
 }
 
-
-
-
 .center-table {
   text-align: center;
   
@@ -13,12 +10,9 @@
   text-align: initial;
 }
 
-
-
-
 .compact {
-  margin-top: 1em;
-  margin-bottom: 0.7em;
+  margin-top: 1.2em;
+  margin-bottom: 0.9em;
 
   p {
     margin: 0 0 0.4em 0;
@@ -52,4 +46,37 @@
   overflow-x: auto;
   overflow-y: hidden;
   max-width: 100%;
+}
+
+.proof {
+  margin-top: 0 !important;
+  padding: 0.3em 0.5em 0.3em 0.5em !important;
+  background: none !important;
+  border-left: .3em solid #ccc;
+  border-radius: 0 !important;
+  font-size: 1em !important;
+}
+
+.proof summary::before {
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.proof summary {
+  font-size: 1em !important;
+  padding: 0 0.5em 0 0.5em !important;
+  margin: 0 !important;
+  font-size: 1em !important;
+  user-select: none;
+}
+
+.proof[open] summary {
+  margin-bottom: 1em !important;
+}
+
+.proof-content {
+  position: relative;
+  top: -0.3em;
+  margin: 0 !important;
+  padding: 0 0.5em 0 0.5em;
 }

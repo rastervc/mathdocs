@@ -39,19 +39,27 @@ nav = [
     ]},
     { "Analysis" = [
         "analysis/home.md",
+        { "The Theory of Limits" = [
+            { "Infinite Series" = [
+                { "Uncountable Sums" = "analysis/theory-of-limits/infinite-series/uncountable-sums.md" },
+            ]},
+        ]},
         { "Real Analysis" = [
             { "Single Variable Integration" = [
-                { "The Riemann Integral" = "analysis/real-analysis/single-variable-integration/riemann-integral.md" },
-                { "Primitives" = "analysis/real-analysis/single-variable-integration/primitives.md" },
-                { "The Riemann-Stieltjes Integral" = "analysis/real-analysis/single-variable-integration/riemann-stieltjes-integral.md" },
+                { "Primitives" = ""},
+                { "The Riemann Integral" = [
+                    "analysis/real-analysis/single-variable-integration/riemann-integral/introduction.md",
+                    { "The Riemann-Stieltjes Integral" = "analysis/real-analysis/single-variable-integration/riemann-integral/riemann-stieltjes-integral.md"}
+                ]},
+                { "The Henstock-Kurzweil Integral" = "analysis/real-analysis/single-variable-integration/hk-integral.md" },
             ]}
         ]},
-        
+        { "Measure Theory" = []},
     ]},
-    { "Differential Geometry" = []},
+    { "Geometry" = []},
     { "Number Theory" = []},
     { "Combinatorics" = []},
-    { "Olympiad Maths" = []},
+    { "Elementary Mathematics" = []},
     { "Competitive Programming" = []},
 ]
 
@@ -89,8 +97,8 @@ features = [
 
 [[project.theme.palette]] 
 scheme = "default"
-primary = "red"
-accent = "deep purple"
+primary = "deep purple"
+accent = "red"
 
 [project.markdown_extensions.abbr]
 

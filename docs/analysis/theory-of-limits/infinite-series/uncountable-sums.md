@@ -1,0 +1,111 @@
+# Uncountable Sums
+
+## Introduction
+
+Thus far, we have seen that finite sums are easy, and countably infinite sums are manageable. What happens when we try summing uncountably many values? Perhaps surprisingly, there are multiple ways to answer this question, some are more useful than others: integration is one such solution, and a lucrative one indeed. In this section, we will focus on the most intuitive, if limited, approach, which also serves as a primer for a trick used in measure theory.
+
+The idea will be to take a bottom-up approach, gradually building our notion of summation for larger and larger classes. Let's start with nonnegative real numbers, since they have a noteworthy property. The more terms you add, the bigger the sum should be. This means that we won't encounter any problems with existence, since the series will follow a stable pattern. This upward trend will also give us a natural way to define the sum as the supremum of its "sub-sums", obtained by selecting finitely many terms.
+
+<div class="compact" markdown>
+#### Definition. (Lebesgue sums, nonnegative case)
+Let $\{a_i\}_{i \in I}$ be an indexed family of nonnegative real numbers. Then, we define their sum to be 
+<div>$$ \sum_{i \in I}a_i = \sup_{J \subset I \text{ finite}}{ \sum_{j \in J} a_{j}} $$</div>
+We will call this *Lebesgue summation*. The indexing set $I$ does not necessarily have to be uncountable for the definition to be valid.
+</div>
+
+<div class="compact" markdown>
+#### Remark. (Naming convention)
+I am not convinced term *Lebesgue summation* is official. It is, however, reasonable, since we are basically following the definition of the Lebesgue integral, but applied to regular sums. Most mathematicians should understand what is meant by *Lebesgue summation* without detailed explanations. Moreover, the concepts we are studying in this section are indeed well-known; they just do not have a standardized name (that I know of).
+</div>
+
+Since the Lebesgue sum is just a supremum in the nonnegative case, it will always be well-defined. In the unfortunate event it equals infinity, we will say the sum *diverges*. If it's finite, it *converges*.
+
+Suppose we allowed some $a_i$ to be negative in the above expression. Then, any sum excluding it would be greater, and hence the final sum wouldn't include it either. This makes the definition fundamentally incompatible with negative numbers. So, how will we add arbitrary real numbers? Here's the trick: we will extract the negative elements beforehand, sum the positive and negative parts independently, and then subtract the results.
+
+<div class="compact" markdown>
+#### Definition. (Lebesgue sums, real case)
+Let $\{a_i\}_{i \in I}$ be an indexed family of real numbers. We define their *positive part* to be the sequence $a_i^+ = \max(a_i, 0)$, and their *negative part* to be $a_i^- = \max(-a_i, 0)$. Finally, we define
+<div>$$ \sum_{i \in I}a_i = \sum_{i \in I}a_i^+ - \sum_{i \in I}a_i^{-} $$</div>
+</div>
+
+Intuitively, the indexed family $a_i^+$ is just $a_i$ with all negative numbers replaced by $0$, while $a_i^{-}$ replaces positive numbers with $0$, and takes the absolute value of the negative ones. For each $i$, we have $a_i = a_i^+ - a_i^-$, motivating this definition.
+
+<div class="compact" markdown>
+#### Remark. (Alternative definition)
+There is another, perhaps cleaner way, to define Lebesgue sums of real numbers. Define the sets
+<div>$$I^+ = \{i \in I \mid a_i > 0\} \quad\text{and}\quad I^- = \{i \in I \mid a_i < 0\}$$ </div>
+Then, the final sum will have the cleaner expression
+<div>$$ \sum_{i \in I^+}a_i - \sum_{i \in I^-}(-a_i) $$</div>
+This is nicer because we no longer have redundant zero terms.
+</div>
+
+Unlike the nonnegative case, we must now worry about whether the sum exists. If both the positive and negative parts converge, all is well, and we say the Lebesgue sum *converges*, just as before. If exactly one part diverges, the sum can still interpreted: $\infty - a = \infty$ and $a - \infty = -\infty$ for real $a$. If both parts diverge, however, the sum is ill-defined. In general, we say a sum diverges whenever it does not converge.
+
+Having defined addition for real numbers, we can extend it to larger classes such as complex numbers and vectors by performing addition component-wise. For example, we may define their sums as follows.
+<div>$$ \sum_{s \in S}z_s = \sum_{s \in S}\Re(z_s) + i\sum_{s \in S}\Im(z_s) \\ \sum_{s \in S}v_s = \left(\sum_{s \in S}\pi_1(v_s), \ldots, \sum_{s \in S}\pi_n(v_s) \right) $$</div>
+
+## Compatibility with Infinite Series
+
+Naturally, we might wonder if there is any backwards compatibility between Lebesgue summation and infinite series. Indeed, any reasonable generalization should satisfy this property.
+
+As usual, we will begin with the nonnegative case.
+
+<div class="compact" markdown>
+#### Theorem. (Compatibility with infinite series, nonnegative case)
+Let $\{a_n\}_{n \ge 0}$ be a sequence of nonnegative real numbers. Then, $\sum_{n \in \N}a_n = \sum_{n = 0}^\infty a_n$, including when the sums diverge.
+<details class="proof" markdown>
+<summary>Proof.</summary>
+<div class="proof-content" markdown>
+Consider the partial sums $A_n = \sum_{k = 0}^na_k$. Since they are all sub-sums, we find 
+<div>$$ \sum_{n = 0}^\infty a_n = \sup_{n \ge 0} A_n \le \sup_{J \subset \N}\sum_{j \in J}a_j = \sum_{n \in \N}a_n \tag{1}$$</div>
+At the same time, any sub-sum $a_{i_1} + \ldots + a_{i_r}$ with indices $i_1 < \ldots < i_r$ must be at most $A_{i_r}$. Indeed, this partial sum contains all of its terms and maybe more. Taking the supremum, we find
+<div>$$ \sum_{n = 0}^\infty a_n = \sup_{n \ge 0} A_n \ge \sup_{J \subset \N}\sum_{j \in J}a_j = \sum_{n \in \N}a_n \tag{2}$$</div>
+Finally, by $(1)$ and $(2)$ we get that the two sums must be equal.
+</div>
+</details>
+</div>
+
+We can now extend this to the general statement. Like before, using the real case component-wise helps us generalize our results to complex numbers and vectors.
+
+<div class="compact" markdown>
+#### Theorem. (Compatibility with infinite series, real case)
+Let $\{a_n\}_{n \ge 0}$ be a sequence of real numbers. Then, the sum $\sum_{n \in \N}a_n$ converges if and only if the infinite series $\sum_{n = 0}^{\infty}a_n$ is absolutely convergent, and in that case, their values coincide.
+<details class="proof" markdown>
+<summary>Proof.</summary>
+<div class="proof-content" markdown>
+Let's consider the positive and negative parts $a_n^+$ and $a_n^-$. Then, using [Theorem $\forall$](#theorem-compatibility-with-infinite-series-nonnegative-case) we find
+<div>$$ \sum_{n = 0}^{\infty}|a_n| = \sum_{n = 0}^{\infty}(a_n^+ + a_n^-) = \sum_{n = 0}^{\infty}a_n^+ + \sum_{n = 0}^{\infty}a_n^- = \sum_{n \in \N}a_n^+ + \sum_{n \in \N}a_n^- $$</div>
+Thus, the infinite series is absolutely convergent if and only if the positive and negative parts are finite, that is, if the sum $\sum_{n \in \N}a_n$ converges. When this happens, the two versions must render the same value because 
+<div> $$ \sum_{n = 0}^{\infty}a_n =  \sum_{n = 0}^{\infty}(a_n^+ - a_n^-) = \sum_{n = 0}^{\infty}a_n^+ - \sum_{n = 0}^{\infty}a_n^- = \sum_{n \in \N}a_n^+ - \sum_{n \in \N}a_n^- = \sum_{n \in \N}a_n $$</div>
+</div>
+</details>
+</div>
+
+If only finitely many $a_n$ are nonzero, we immediately obtain the following corollary.
+
+<div class="compact" markdown>
+#### Corollary. (Compatibility with finite sums)
+If $a_1, a_2, \ldots, a_n \in \R$, then $\sum_{k \in \{1, 2, \ldots, n\}}a_k = a_1 + a_2 + \ldots + a_n$.
+</div>
+
+Here, it makes sense to require absolute convergence because Lebesgue sums have no fixed order. On the other hand, conditionally convergent sums are highly order dependent.
+
+## Uncountable Sums are Disappointing
+
+We finally get to see why uncountable sums are not that interesting (when defined as above).
+
+<div class="compact" markdown>
+#### Theorem. (Uncountable sums are infinite)
+Let $\{a_i\}_{i \in I}$ be an uncountable family of positive numbers. Then, $\sum_{i \in I}a_i = \infty$.
+
+<details class="proof" markdown>
+<summary>Proof.</summary>
+<div class="proof-content" markdown>
+For $n \in \N^*$, define $A_n$ to be the set of indicies $i \in I$ for which $\frac{1}{n} \le a_i < \frac{1}{n - 1}$. In particular, $A_0$ will contain all $i$ for which $a_i \ge 1$. It is easy to see that the sets $A_n$ partition $I$, and hence at least one of them must be infinite, say $A_k$. Then, we easily get the inequality
+<div>$$ \sum_{i \in I}a_i \ge \sum_{i \in A_k}a_i \ge \frac{1}{n} \cdot \infty = \infty $$</div>
+Thus, the Lebesgue sum must diverge.
+</div>
+</div>
+
+
+
