@@ -45,13 +45,17 @@
 .katex-display {
   overflow-x: auto;
   overflow-y: hidden;
-  max-width: 100%;
 }
 
 .katex-display .tag {
+  position: absolute;
+  right: 0;
+  border: 1px solid red;
+}
+
+.math-scroll .tag{
   position: static !important;
-  margin-left: 1em !important;
-  color: var(--md-accent-fg-color)
+  margin-left: 1em;
 }
 
 .proof {

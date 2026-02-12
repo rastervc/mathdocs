@@ -123,7 +123,7 @@ For the sum to be finite, the sums of the positive and negative parts must both 
 <div class="compact" markdown>
 #### Theorem. (Froda's theorem on a compact interval)
 A monotonous map $f: [a, b] \to \R$ has at most countably many points of discontinuity.
-<details class="proof" markdown>
+<details class="proof" markdown open>
 <summary>Proof.</summary>
 <div class="proof-content" markdown>
 Without loss of generality, assume the function is increasing. Otherwise, we can substitute $f$ with $-f$, which obviously preserves the set of discontinuities and makes the map increasing.
