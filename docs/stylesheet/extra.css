@@ -48,6 +48,12 @@
   max-width: 100%;
 }
 
+.katex-display .tag {
+  position: static !important;
+  margin-left: 1em !important;
+  color: var(--md-accent-fg-color)
+}
+
 .proof {
   margin-top: 0 !important;
   padding: 0.3em 0.5em 0.3em 0.5em !important;

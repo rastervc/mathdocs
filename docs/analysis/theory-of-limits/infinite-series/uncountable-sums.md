@@ -152,7 +152,7 @@ where $D_f$ is the set of *all* discontinuities of $f$. Finally, [Theorem $\fora
 <div class="compact" markdown>
 #### Theorem. (Froda's theorem, general case)
 Let $I \subset R$ be an interval and $f: I \to \R$ a monotonous function. Then, $f$ has at most countably many points of discontinuity.
-<details class="proof" markdown open>
+<details class="proof" markdown>
 <summary>Proof.</summary>
 <div class="proof-content" markdown>
 We may partition (if not for the overlapping ends) $I$ into countably many compact intervals $\{I_n\}_{n \ge 0}$. Then, every interval $I_n$ contains at most countably many point of discontinuity, and since there are countably many intervals, $f$ can only have at most countably many discontinuities in total.
