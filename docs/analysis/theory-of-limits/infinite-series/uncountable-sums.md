@@ -15,7 +15,7 @@ We will call this *Lebesgue summation*. The indexing set $I$ does not necessaril
 
 <div class="compact" markdown>
 #### Remark. (Naming convention)
-I am not convinced term *Lebesgue summation* is official. It is, however, reasonable, since we are basically following the definition of the Lebesgue integral, but applied to regular sums. Most mathematicians should understand what is meant by *Lebesgue summation* without detailed explanations. Moreover, the concepts we are studying in this section are indeed well-known; they just do not have a standardized name (that I know of).
+I am not convinced the term *Lebesgue summation* is official. It is, however, reasonable, since we are basically following the definition of the Lebesgue integral, but applied to regular sums. Most mathematicians should understand what is meant by *Lebesgue summation* without detailed explanations. Moreover, the concepts we are studying in this section are indeed well-known; they just do not have a standardized name (that I know of).
 </div>
 
 Since the Lebesgue sum is just a supremum in the nonnegative case, it will always be well-defined. In the unfortunate event it equals infinity, we will say the sum *diverges*. If it's finite, it *converges*.
@@ -101,11 +101,61 @@ Let $\{a_i\}_{i \in I}$ be an uncountable family of positive numbers. Then, $\su
 <details class="proof" markdown>
 <summary>Proof.</summary>
 <div class="proof-content" markdown>
-For $n \in \N^*$, define $A_n$ to be the set of indicies $i \in I$ for which $\frac{1}{n} \le a_i < \frac{1}{n - 1}$. In particular, $A_0$ will contain all $i$ for which $a_i \ge 1$. It is easy to see that the sets $A_n$ partition $I$, and hence at least one of them must be infinite, say $A_k$. Then, we easily get the inequality
-<div>$$ \sum_{i \in I}a_i \ge \sum_{i \in A_k}a_i \ge \frac{1}{n} \cdot \infty = \infty $$</div>
-Thus, the Lebesgue sum must diverge.
+For $n \in \N^*$, define $A_n$ to be the set of indicies $i \in I$ for which $\frac{1}{n} \le a_i < \frac{1}{n - 1}$. In particular, $A_0$ will contain all $i$ for which $a_i \ge 1$. It is easy to see that the sets $A_n$ partition $I$, and hence at least one of them must be infinite, say $A_k$. Then, we get the inequality
+<div>$$ \sum_{i \in I}a_i \ge \sum_{i \in A_k}a_i \ge \sum_{i \in J}a_i \ge \frac{1}{k}|J|$$</div>
+for any finite $J \subset A_k$. Taking the supremum across all subsets of $A_k$, which get arbitrarily big in size conidering $A_k$ is infinite, we find the Lebesgue sum must diverge.
 </div>
 </div>
 
+<div class="compact" markdown>
+#### Corollary. (Only at most countable sums are noteworthy)
+Let $\{a_i\}_{i \in I}$ be an uncountable family of real numbers such that their sum is finite. Then, at most countably many of them are nonzero. Alternatively, if every element is nonzero, we find that $I$ must be at most countable.
 
+<details class="proof" markdown>
+<summary>Proof.</summary>
+<div class="proof-content" markdown>
+For the sum to be finite, the sums of the positive and negative parts must both be finite. Since they consist of positive terms, both are at most countable. Thus, their union, the set of nonzero terms, is at most countable.
+</div>
+</div>
 
+## A Nice Application
+
+<div class="compact" markdown>
+#### Theorem. (Froda's theorem on a compact interval)
+A monotonous map $f: [a, b] \to \R$ has at most countably many points of discontinuity.
+<details class="proof" markdown>
+<summary>Proof.</summary>
+<div class="proof-content" markdown>
+Without loss of generality, assume the function is increasing. Otherwise, we can substitute $f$ with $-f$, which obviously preserves the set of discontinuities and makes the map increasing.
+
+An important observation is that any discontinuity must necessarily be a jump discontinuity, since the lateral limits can be expressed as follows
+<div>$$ f(x_0-) = \sup_{x < x_0}f(x) \quad\quad f(x_0+) = \inf_{x > x_0}f(x) \tag{$1$} $$</div>
+and must be finite, more precisely in the interval $[f(a), f(b)]$.
+
+If $x < y$ are two points on $[a, b]$ and there is a discontinuity at $\lambda \in (x, y)$, then 
+<div>$$ f(y) - f(x) \ge f(y) - f(\lambda-) \ge f(\lambda+) - f(\lambda-) \tag{$2$} $$</div>
+thanks to the relations in $(1)$. More generally, suppose there are discontinuities at the points $\lambda_1 < \ldots < \lambda_n$ between $x$ and $y$. Then, considering the midpoints $c_k = \frac{\lambda_k + \lambda_{k + 1}}{2}$, $c_0 = x$ and $c_{n} = y$ we find 
+<div>$$ f(y) - f(x) = f(c_n) - f(c_{n - 1}) + \ldots + f(c_1) - f(c_0) $$</div>
+which, using the simpler case $(2)$, gives the inequality
+<div>$$ f(y) - f(x) \ge f(\lambda_n+) - f(\lambda_n-) + \ldots + f(\lambda_1+) - f(\lambda_1-) $$</div>
+
+We can finally move to the main dish. Suppose $D \subset [a, b]$ is a finite set of discontinuities. The above inequality, applied to the whole interval and the points in $D$, shows
+<div>$$ f(b) - f(a) \ge \sum_{\lambda \in D} (f(\lambda+) - f(\lambda-)) $$</div>
+Moreover, every difference $f(\lambda+) - f(\lambda-)$ must be positive. It certainly isn't negative ($f$ is increasing), and if it were zero, then the function would be continuous at that point.
+Taking the supremum over all such sets $D$, we obtain the inquality
+<div>$$ f(b) - f(a) \ge \sum_{\lambda \in D_f} (f(\lambda+) - f(\lambda-)) $$</div>
+where $D_f$ is the set of *all* discontinuities of $f$. Finally, [Theorem $\forall$](#corollary-only-at-most-countable-sums-are-noteworthy) shows $D_f$ must be at most countable.
+</div>
+</details>
+</div>
+
+<div class="compact" markdown>
+#### Theorem. (Froda's theorem, general case)
+Let $I \subset R$ be an interval and $f: I \to \R$ a monotonous function. Then, $f$ has at most countably many points of discontinuity.
+<details class="proof" markdown open>
+<summary>Proof.</summary>
+<div class="proof-content" markdown>
+We may partition (if not for the overlapping ends) $I$ into countably many compact intervals $\{I_n\}_{n \ge 0}$. Then, every interval $I_n$ contains at most countably many point of discontinuity, and since there are countably many intervals, $f$ can only have at most countably many discontinuities in total.
+</div>
+</details>
+</div>
