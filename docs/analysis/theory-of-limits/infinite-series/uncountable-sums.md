@@ -118,7 +118,9 @@ For the sum to be finite, the sums of the positive and negative parts must both 
 </div>
 </div>
 
-## A Nice Application
+## Some Applications
+
+### Discontinuities of Monotonous Functiouns
 
 <div class="compact" markdown>
 #### Theorem. (Froda's theorem on a compact interval)
@@ -155,7 +157,21 @@ Let $I \subset R$ be an interval and $f: I \to \R$ a monotonous function. Then, 
 <details class="proof" markdown>
 <summary>Proof.</summary>
 <div class="proof-content" markdown>
-We may partition (if not for the overlapping ends) $I$ into countably many compact intervals $\{I_n\}_{n \ge 0}$. Then, every interval $I_n$ contains at most countably many point of discontinuity, and since there are countably many intervals, $f$ can only have at most countably many discontinuities in total.
+There is an increasing sequence of compact intervals
+<div>$$ [a_1, b_1] \subset [a_2, b_2] \subset \ldots \subset [a_n,b_n] \subset \ldots $$</div> 
+such that their union is $I$ (we may simply choose $a_n$ and $b_n$ so that their limits are the ends of the interval $I$, and make sure $a_n \le b_n$). Then, $f$ is monotonous on each one of these compact intervals and hence has at most countably many points of discontinuity on each one. More precisely, $D_f \cap [a_n, b_n]$ must be at most countable, since any discontinuity of $f$ residing the in the interior of this interval must be a discontinuity of $f \vert_{[a_n, b_n]}$. The equality 
+<div>$$ D_f = \bigcup_{n \ge 1}(D_f \cap [a_n, b_n]) $$</div>
+shows $D_f$ is at most countable.
+</div>
+</details>
+</div>
+
+<div class="compact" markdown>
+#### Theorem.
+Let $f: [a,b] \to \R$ be of bounded variatoion. Then, there are at most $\frac{1}{\epsilon}V_f$ points $x \in [a,b]$ such that $\omega_f(x) \ge \epsilon$. 
+<details class="proof" markdown>
+<summary>Proof.</summary>
+<div class="proof-content" markdown>
 </div>
 </details>
 </div>
